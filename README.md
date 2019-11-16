@@ -57,7 +57,7 @@ Install npm to run it.
 
 Use command `npm install http-server` to install http-server
 
-To run use `http-server` or without installing anything just open live server in VSCode that will make it run directly.
+To run type `http-server` in terminal/CommandPrompt and visit on the generated url or without installing anything just open live server in VSCode that will make it run directly.
 
 You can use your own abi and address by visiting online IDE that we are previously using.
 
