@@ -47,6 +47,20 @@ In Deployed contracts you will see your contract address.
 
 Along with this there is drop down menu by clicking on it you can interactively run your DAPP. 
 
+# Procedure to run it offline
+
+Clone or Download this repository.
+
+Open your favouraite IDE(VSCode int my case).
+
+Install npm to run it.
+
+Use command `npm install http-server` to install http-server
+
+To run use `http-server` or without installing anything just open live server in VSCode that will make it run directly.
+
+You can use your own abi and address by visiting online IDE that we are previously using.
 
 
+#
 ![alt text](https://github.com/VersatileVishal/Ethereum-Dapp/blob/master/Ethereum.png)
