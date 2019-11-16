@@ -4,7 +4,7 @@
 
 - Metamask(Ropsten Test Network) is used for transaction fees(includes Amount+Gas fee ).
 
-- ### Gas - Whenever we do a transaction , the miners want to get rewarded , so we have to pay them some fees known as GAS.
+- ### Gas - Whenever we do a transaction , the miners want to get rewarded , so we have to pay them some fees known as Gas.
 
 - Ether is the cryptocurrency being used for transaction based on Ethereum.
 
