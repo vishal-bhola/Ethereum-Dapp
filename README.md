@@ -35,7 +35,7 @@ Bootstrap is used for making GUI.
     
 # Procedure to run it on online IDE
 
-[`Ethereum.org`](https://remix.ethereum.org/)
+Visit [`Ethereum.org`](https://remix.ethereum.org/)
 
 Select solidity on the main page as your programming language.
 
