@@ -1,6 +1,6 @@
 # Ethereum-Dapp
 
-- A simple (`Bank Transaction DAPP`) with GUI.
+- A simple `Bank Transaction DAPP` with GUI.
 
 - Metamask(Ropsten Test Network) is used for transaction fees(includes Amount+Gas fee ).
 
