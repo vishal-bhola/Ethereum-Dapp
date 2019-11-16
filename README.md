@@ -19,7 +19,7 @@
 
 - Get some free ether using any of the test network(prefer not to use Main Network as it may cost you some money for buying ether).
 
-- Add Bootstrap CDN in your file to feel some great experience.
+- Add Bootstrap CDN in your file to feel some great user experience.
 
 - To make your Dapp run add the files given below:-
     
