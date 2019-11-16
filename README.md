@@ -1,14 +1,18 @@
 # Ethereum-Dapp
 
-- A simple `Bank Transaction DAPP` with GUI.
+A simple `Bank Transaction DAPP` with GUI.
 
-- Metamask(Ropsten Test Network) is used for transaction fees(includes Amount+Gas fee ).
+***Solidity*** is the programming language used.
 
-- ### Gas - Whenever we do a transaction , the miners want to get rewarded , so we have to pay them some fees known as Gas.
+Metamask(Ropsten Test Network) is used for transaction fees(includes Amount+Gas fee ).
 
-- Ether is the cryptocurrency being used for transaction based on Ethereum.
 
-- Bootstrap is used for making GUI.
+
+### Gas - Whenever we do a transaction , the miners want to get rewarded , so we have to pay them some fees known as Gas.
+
+Ether is the cryptocurrency being used for transaction based on Ethereum.
+
+Bootstrap is used for making GUI.
 
 
 # Requirements
@@ -29,3 +33,19 @@
    - ###### *`https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js`*
     
     
+# Procedure to run it on online IDE
+
+[`Ethereum.org`](https://remix.ethereum.org/)
+
+Select solidity on the main page as your programming language.
+
+Now compile and run it.
+
+It will ask you for confirmation click confirm and then wait for a while.
+
+In Deployed contracts you will see your contract address.
+
+Along with this there is drop down menu by clicking on it you can interactively run your DAPP. 
+
+
+
