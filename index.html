@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="text-center" style="margin-top:20%">
+        <label>Enter Your amount:</label>
+        <input type="text" id="amount"><br>
+        <span class="ml-1">This is your current amount: </span><span id="balance" class="btn btn-success"></span><br><br>
+        <button id="deposit" class="btn btn-primary">Deposit</button>
+        <button id="withdraw" class="btn btn-danger">Withdraw</button>
+    </div>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"></script>
+    
+
+
+    
+
+    <script>
+        
+        var contract;
+
+        $(document).ready(function(){
+            web3 = new Web3(web3.currentProvider);
+
+            var address = "0x6AbF36bfeEe4201adfD8d21b5AFe9542700d3512";
+            
+            var abi = [
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getBalance",
+		"outputs": [
+			{
+				"name": "",
+				"type": "int256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "amt",
+				"type": "int256"
+			}
+		],
+		"name": "withdraw",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "amt",
+				"type": "int256"
+			}
+		],
+		"name": "deposit",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	}
+];
+
+            contract = new web3.eth.Contract(abi,address);
+
+            contract.methods.getBalance().call().then(function(bal){
+                $('#balance').html(bal);
+            })
+
+        })
+
+            $('#deposit').click(function(){
+            var amt = 0;
+            amt = parseInt($('#amount').val());
+
+            web3.eth.getAccounts().then(function(accounts){
+
+                return contract.methods.deposit(amt).send({from: accounts[0]});
+            }).then(function(tx){
+                console.log(tx);
+            }).catch(function(tx){
+                console.log(tx);
+            });
+        });
+
+
+        $('#withdraw').click(function(){
+            var amt = 0;
+            amt = parseInt($('#amount').val());
+
+            web3.eth.getAccounts().then(function(accounts){
+                var acc = accounts[0];
+                return contract.methods.withdraw(amt).send({from: acc});
+            }).then(function(tx){
+                console.log(tx);
+            }).catch(function(tx){
+                console.log(tx);
+            })
+
+        })
+
+    </script>
+
+</body>
+</html>
