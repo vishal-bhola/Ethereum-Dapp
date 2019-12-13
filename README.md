@@ -6,7 +6,9 @@ A simple `Bank Transaction DAPP` with GUI.
 
 Metamask(Ropsten Test Network) is used for transaction fees(includes Amount+Gas fee ).
 
+`bank.sol` is the file which contains your smart contract.
 
+`index.html` file contains your GUI and Interaction part with the smart contract.
 
 ### Gas - Whenever we do a transaction , the miners want to get rewarded , so we have to pay them some fees known as Gas.
 
@@ -39,6 +41,8 @@ Visit [`Ethereum.org`](https://remix.ethereum.org/)
 
 Select solidity on the main page as your programming language.
 
+Write code there i.e given in `bank.sol` file to you.
+
 Now compile and run it.
 
 It will ask you for confirmation click confirm and then wait for a while.
@@ -57,10 +61,18 @@ Install npm to run it.
 
 Use command `npm install http-server` to install http-server
 
-To run type `http-server` in terminal/CommandPrompt and visit on the generated url or without installing anything just open live server in VSCode that will make it run directly.
+To run type `http-server` in terminal/CommandPrompt and visit on the generated url or without installing anything just `open live server` in VSCode that will make it run directly.
 
 You can use your own abi and address by visiting online IDE that we are previously using.
 
+
+# Make Your Own Code
+
+If you want to make your own Dapp then copy/write code which is written in `bank.sol` in the online ide [`Ethereum.org`](https://remix.ethereum.org/), compile it and then just only replace your `abi` and `address` with mine in `index.html`. You will find `abi` at the solidity compiler option(on left of ide) and `address` at deploy&run transaction option(on left of ide as well).
+
+Copy these things and replace it with mine.
+
+There you Go !!!
 
 #
 ![alt text](https://github.com/VersatileVishal/Ethereum-Dapp/blob/master/Ethereum.png)
